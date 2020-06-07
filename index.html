@@ -16,14 +16,12 @@
         #sel{
             height: 50px; width: 100%;
             font-size: 30px;
-            text-align: center;
             border-radius: 5px;
             background-color: rgb(58, 54, 54);
             -webkit-appearance:none; /*去除input默认样式*/
             color: #ccc;
-        }
-        #opt{
-            font-size: 50px;
+            text-align:center;
+            text-align-last:center;
         }
         #vm {
             text-align: center;
@@ -43,7 +41,7 @@
     <div id="vm">
         <img src="./css/images/ico.png" >
         <select id="sel" v-model="selected" @change="sld">
-            <option v-for="item in type" :value="item" :disabled = "type[0] == item " class="opt">{{item}}</option>
+            <option v-for="item in type" :value="item" :disabled = "type[0] == item ">{{item}}</option>
         </select>
         <h2>{{"克制: " + great}}</h2>
         <h2>{{"抵抗: " + worse}}</h2>
