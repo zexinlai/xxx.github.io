@@ -24,6 +24,12 @@
         #opt{
             font-size: 50px;
         }
+        #vm {
+            text-algin: center;   
+        }
+        #vm img {
+            border-radius:50%;
+        }
         @media (prefers-color-scheme: dark) {
           body {
             background: #222;
@@ -34,7 +40,7 @@
 </head>
 <body>
     <div id="vm">
-        <img src="./css/images/ico.png"/>
+        <img src="./css/images/ico.png" >
         <select id="sel" v-model="selected" @change="sld">
             <option v-for="item in type" :value="item" :disabled = "type[0] == item " class="opt">{{item}}</option>
         </select>
