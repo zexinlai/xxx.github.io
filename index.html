@@ -35,6 +35,13 @@
             color: #ccc;
           }
         }
+        .msgBox{
+            border: 1px solid whitesmoke;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 5px;
+            line-height: 40px;
+        }
     </style>
 </head>
 <body>
@@ -43,10 +50,11 @@
         <select id="sel" v-model="selected" @change="sld">
             <option v-for="item in type" :value="item" :disabled = "type[0] == item ">{{item}}</option>
         </select>
+        <div class="msgBox">宝可梦剑冠军已经击败 2020年6月7日13点55分</div>
         <div v-show="hello">
-        <h2>{{"克制: " + great}}</h2>
-        <h2>{{"抵抗: " + worse}}</h2>
-        <h2>{{"无效: " + (useless? useless : "无")}}</h2>
+            <h2>{{"克制: " + great}}</h2>
+            <h2>{{"抵抗: " + worse}}</h2>
+            <h2>{{"无效: " + (useless? useless : "无")}}</h2>
         </div>
     </div>
     <script>
