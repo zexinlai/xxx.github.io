@@ -5,7 +5,7 @@
 }
 .nav {
     display: flex;
-    background-color: #131313;
+    background-color: #333333;
     justify-content: center;
     height: 44px;
     text-align: center;
