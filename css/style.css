@@ -5,17 +5,20 @@
 }
 .nav {
     display: flex;
-    background-color: #333333;
+    background-color: #131313;
     justify-content: center;
     height: 44px;
     text-align: center;
     align-items: center;
 }
 .nav a{
-    color: white;
+    color: #d0d0d0;
     text-decoration: none;
     width: 102px;
-
+	font-weight: 300;
+}
+.nav a:hover {
+	color: #fff;
 }
 .nav .logo {
     background-image: url(../img/logo.svg);
@@ -53,14 +56,48 @@
     transition: all .5s;
 }
 .nav .navpage {
-    display: none;
+    display: flex;
+	height: 0vh;
+	width: 100vh;
+	overflow: hidden;
+	transition: height .6s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-top: 48px;
+	background-color: #000000;
+	flex-direction: column;
 }
+.navpage .searchInput {
+        display: flex;
+        margin:0 10px 15px 10px;
+        padding: 0 10px;
+        height: 36px;
+        align-items: center;
+        background-color: #1d1d1f;
+        border-radius: 4px;
+    }
+    .navpage .icon {
+        background-image: url(../img/searchInput.svg);
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 13px;
+    }
+    .navpage input {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        outline: none ;
+        color: #FFF;
+        font-size: 15px;
+    }
 @media only screen and (max-width: 768px){
     .nav .text, .nav .search{
         display: none;
     }
     .nav {
         justify-content: space-between;
+		height: 48px;
     }
     .nav a, .nav label{
         width: 50px;
@@ -84,41 +121,16 @@
         transform: rotate(-45deg);
         margin-top: -1px;
     }
+	
     .nav #choose:checked~.navpage {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: 0;
+
         background: #000;
         width: 100vw;
         height: 100vh;
-        padding-top: 54px ;
-        
+		padding-top: 48px;
+		margin-top: 0;
     }
-    .navpage .searchInput {
-        display: flex;
-        margin:0 10px 15px 10px;
-        padding: 0 10px;
-        height: 36px;
-        align-items: center;
-        background-color: #1d1d1f;
-        border-radius: 4px;
-    }
-    .navpage .icon {
-        background-image: url(../img/searchInput.svg);
-        background-repeat: no-repeat;
-        width: 26px;
-        height: 13px;
-    }
-    .navpage input {
-        background-color: transparent;
-        width: 100%;
-        height: 100%;
-        outline: none ;
-        color: #FFF;
-        font-size: 15px;
-    }
+    
     .navpage .navList {
         margin: 0 40px;
         display: flex;
