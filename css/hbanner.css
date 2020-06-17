@@ -1,0 +1,93 @@
+.hbanner {
+	display: flex;
+	margin: 12px ;
+}
+
+.hbanner .bannerSm {
+	flex: 1;
+	height: 600px;
+}
+.hbanner .bannerSm h1 {
+	font-size: 40px;
+}
+.hbanner a {
+	font-size: 16px;
+}
+.hbanner .bannerSm h4 {
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+.hbanner .bannerSm:nth-child(1){
+	background-color: #000000;
+	color: #fff;
+	background-image: url(../img/hbanner1.jpg);
+	margin-right: 6px;
+}
+.hbanner .bannerSm:nth-child(2){
+	background-color: #fafafa;
+	color: #000000;
+	background-image: url(../img/hbanner1.1.jpg);
+	margin-left: 6px;
+}
+
+.hbanner1 .bannerSm:nth-child(1){
+	background-image: url(../img/hbanner2.jpg);
+}
+.hbanner1 .bannerSm:nth-child(2){
+	background-image: url(../img/hbanner2.1.jpg);
+}
+.hbanner2 .bannerSm:nth-child(1){
+	background-color: #fafafa;
+	color: #000000;
+	background-image: url(../img/hbanner3.jpg);
+}
+.hbanner2 .bannerSm:nth-child(2){
+	background-color: #000000;
+	color: #fff;
+	background-image: url(../img/hbanner3.1.jpg);
+}
+@media screen and (max-width:768px) {
+	.hbanner {
+		flex-direction: column;
+		margin:0;
+		height: 1096px;
+	}
+	.hbanner .bannerSm { 
+		margin-top: 12px;
+	}
+	.hbanner .bannerSm h1 {
+		font-size: 32px;
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.hbanner .bannerSm:nth-child(1) {
+		padding-top: 44px;
+		height: 548px;
+		background-size: 736px 548px;
+		background-image: url(../img/hbanner1sm.jpg);
+		margin-right: 0px;
+	}
+	.hbanner .bannerSm:nth-child(2) {
+		padding-top: 44px;
+		height: 548px;
+		background-size: 736px 548px;
+		background-image: url(../img/hbanner1.1sm.jpg);
+		margin-left: 0px;
+	}
+	.hbanner1 .bannerSm:nth-child(1){
+		background-image: url(../img/hbanner2sm.jpg);
+	}
+	.hbanner1 .bannerSm:nth-child(2){
+		background-size: 356px 324px;
+		background-image: url(../img/hbanner2.1sm.jpg);
+	}
+	.hbanner2 .bannerSm:nth-child(1){
+		/* height: 263px; */
+		background-size: 355px 263px;
+		background-image: url(../img/hbanner3sm.jpg);
+	}
+	.hbanner2 .bannerSm:nth-child(2){
+		background-image: url(../img/hbanner3.1sm.jpg);
+	}
+}
