@@ -57,10 +57,11 @@ body {
     height: 44px;
 }
 .nav .toggleBtn {
-    display: none;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    position: relative;
+    display: none;
+    height: 44px;
     z-index: 100;
 }
 .toggleBtn .line {
