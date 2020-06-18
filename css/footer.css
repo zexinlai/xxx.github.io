@@ -27,9 +27,6 @@
 	width: 1068px;
 }
 .footerLink .list {
-	/* display: flex; */
-	/* width: 1068px; */
-	/* justify-content: space-between; */
 	cursor: pointer;
 }
 .footerLink .list li {
@@ -100,22 +97,8 @@
 		overflow: hidden;
 		height: 0;
 	}
-	#plus1:checked~ul {
-		height: 250px;
-	}
-	#plus2:checked~ul {
-		height: 250px;
-	}
-	#plus3:checked~ul {
-		height: 250px;
-	}
-	#plus4:checked~ul {
-		height: 250px;
-	}
-	#plus5:checked~ul {
-		height: 250px;
-	}
-	#plus6:checked~ul {
+
+#plus1:checked~ul, #plus2:checked~ul, #plus3:checked~ul,#plus4:checked~ul,#plus5:checked~ul, #plus6:checked~ul {
 		height: 250px;
 	}
 	.list label span{
@@ -125,24 +108,15 @@
 		display: flex;
 		margin: 5px 0;
 	}
-	#plus1:checked~label span {
+	#plus1:checked~label span,
+	#plus2:checked~label span,
+	#plus3:checked~label span,
+	#plus4:checked~label span,
+	#plus5:checked~label span,
+	#plus6:checked~label span{
 		transform: rotate(-45deg);
 	}
- 	#plus2:checked~label span {
-		transform: rotate(-45deg);
-	}
-	#plus3:checked~label span {
-		transform: rotate(-45deg);
-	}
-	#plus4:checked~label span {
-		transform: rotate(-45deg);
-	} 
-	#plus5:checked~label span {
-		transform: rotate(-45deg);
-	}
-	#plus6:checked~label span {
-		transform: rotate(-45deg);
-	} 
+ 	 
 	.footer .list li:first-child {
 		display: flex;
 		justify-content: space-between;
