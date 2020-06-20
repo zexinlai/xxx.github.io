@@ -1,10 +1,10 @@
 .footer {
 	font-size: 10px;
-	font-weight: 300px;
+	font-weight: 300;
 	color: #86868B;
 	display: flex;
 	flex-direction: column;
-	background-color: #FAFAFA;
+	background-color: #f5f5f7;
 	align-items: center;
 	padding: 0 38px;
 	padding-top: 14px;
@@ -21,26 +21,51 @@
 		margin-bottom: 20px;
 		
 }
-.footer .list {
+.footer .footerLink {
 	display: flex;
-	width: 1068px;
 	justify-content: space-between;
+	width: 1068px;
 }
-.footer .list li {
+.footerLink .list {
+	cursor: pointer;
+}
+.footerLink .list li {
 	list-style: none;
-	margin-bottom: 10px;
+	padding-bottom: 10px;
+	cursor: pointer;
 }
-.footer .list li:first-child {
-	font-weight: bold;
-	color: #1d1d1f;
+.footerLink .list label {
+	cursor: pointer;
+	height: 30px;
+	line-height: 30px;
 }
-.footer .list li a {
+
+.footerLink .list li a {
 	color: #86868B;
 	text-decoration: none;
+
 }
-.footer .list li a:hover {
+.footerLink label {
+	font-weight: 350;
+	color: #1d1d1f;
+	}
+.footerLink .list li a:hover {
 	text-decoration: underline;
 }
+.footerLink 
+.list input {
+	display: none;
+}
+.list label span{
+	display: none;
+}
+.list .hr {
+	display: none;
+}
+.footEnd {
+	margin-top: 20px;
+}
+
 @media screen and (max-width:1068px) {
 	.footer {
 		
@@ -51,21 +76,54 @@
 	.footer p {
 		width: 100%;
 	}
-	.footer .list {
+	.footer .footerLink {
 		width: 100%;
 	}
 }
 @media screen and (max-width:768px) {
-	.footer .list {
+	
+	.footer .footerLink {
 		display: flex;
 		width: 100%;
 		flex-direction: column;
 		justify-content: space-between;
 	}
-	.footer .list li{
-		display: none;
+	.footer .list label{
+		display: flex;
+		justify-content: space-between;
 	}
+	.footer .list ul{
+		transition: height .6s;
+		overflow: hidden;
+		height: 0;
+	}
+
+#plus1:checked~ul, #plus2:checked~ul, #plus3:checked~ul,#plus4:checked~ul,#plus5:checked~ul, #plus6:checked~ul {
+		height: 250px;
+	}
+	.list label span{
+		display: flex;
+	}
+	.list .hr {
+		display: flex;
+		margin: 5px 0;
+	}
+	#plus1:checked~label span,
+	#plus2:checked~label span,
+	#plus3:checked~label span,
+	#plus4:checked~label span,
+	#plus5:checked~label span,
+	#plus6:checked~label span{
+		transform: rotate(-45deg);
+	}
+ 	 
 	.footer .list li:first-child {
 		display: flex;
+		justify-content: space-between;
+	}
+	.footer .list li:first-child label {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
 	}
 }
