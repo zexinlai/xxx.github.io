@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>过渡动画</title>
+		<style type="text/css">
+			#d1 {
+				width: 100px;
+				height: 100px;
+				background-color: #2997FF;
+				/* transition: width 2s cubic-bezier(0.18, 0.89, 0.32, 1.28);; */
+				transition-property: width, background-color;
+				/* transition-delay: 1s; */
+				transition-duration: .6s, 2s;
+				transition-timing-function: ease;
+				margin-bottom: 100px;
+			}
+			#d1:hover {
+				width: 500px;
+				height: 100px;
+				background-color: cornflowerblue;
+			}
+			#d2 {
+				width: 200px;
+				height: 300px;
+				background-color: #BF4800;
+				margin: 0 auto;
+				box-shadow: 0 0 0 0 #D0D0D0;
+				transition: all .8s;
+			}
+			#d2:hover {
+				box-shadow: 1px 2px 4px 4px #D0D0D0
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			
+		</div>
+		
+		<div id="d2">
+			
+		</div>
+	</body>
+</html>
